@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (orientation: landscape) {
+  .form {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .form {
+    flex-direction: column;
+  }
+}
