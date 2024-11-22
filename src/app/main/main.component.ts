@@ -45,6 +45,12 @@ export class MainComponent {
   }
 
   protected onDateChange(event: MatDatepickerInputEvent<any, any>) {
+    if (event.value < new Date()) {
+      localStorage.setItem(dateKey, '')
+      this.date.set('')
+      return
+    }
+
     localStorage.setItem(dateKey, event.value)
     this.date.set(event.value)
   }
