@@ -7,6 +7,7 @@ import { MatDatepickerInputEvent, MatDatepickerModule } from '@angular/material/
 import { provideNativeDateAdapter } from '@angular/material/core'
 import { getCountdownString } from '../../utils/getCountdownString'
 import { getTomorrowsDate } from '../../utils/getTomorrowsDate'
+import { DateAdapter } from '@angular/material/core'
 
 const titleKey = 'nc-title'
 const dateKey = 'nc-date'
@@ -26,6 +27,10 @@ export class MainComponent {
   date = signal(localStorage.getItem(dateKey) ? new Date(localStorage.getItem(dateKey) || '') : '')
 
   protected readonly minDate = signal(getTomorrowsDate())
+
+  constructor(private dateAdapter: DateAdapter<Date>) {
+    this.dateAdapter.setLocale('sv-SE')
+  }
 
   ngOnInit() {
     this.updateCountdownString()
