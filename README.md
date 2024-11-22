@@ -29,7 +29,7 @@ Navigate to http://localhost:4200/.
 
 ## Deployed web app
 
--- Link goes here --
+[https://johan-olssonn.github.io/nc-countdown/](https://johan-olssonn.github.io/nc-countdown/)
 
 ## Optional goals
 
